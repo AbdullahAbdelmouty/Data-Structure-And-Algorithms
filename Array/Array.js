@@ -41,43 +41,44 @@
 // first != val ,end != val => not swap ,first ++ , same
 // will stop the loop when start>end
 
-let nums = [0,1,2,2,3,0,4,2]; 
-let val = 2;
-let removeElement = (nums,val)=>{
-    let startPointer = 0;
-    let endPointer = nums.length - 1;
-    let k = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if(startPointer>endPointer){
-            break;
-        }
-        if(nums[startPointer] === val && nums[endPointer] !== val){
-            let temp = nums[endPointer];
-            nums[endPointer] = "_";
-            nums[startPointer] = temp;
-            startPointer++;
-            endPointer--;
-            k++
-        }
-        else if(nums[startPointer] !== val && nums[endPointer] === val){
-            nums[endPointer] = "_";
-            k++;
-            startPointer++;
-            endPointer--;
-        }
-        else if(nums[startPointer] === val && nums[endPointer] === val){
-            nums[endPointer] = "_";
-            k++;
-            endPointer--;
-        }
-        else{
-            startPointer++;
-        }
+// let nums = [0,1,2,2,3,0,4,2]; 
+// let val = 2;
+// let removeElement = (nums,val)=>{
+//     let startPointer = 0;
+//     let endPointer = nums.length - 1;
+//     let k = 0;
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if(startPointer>endPointer){
+//             break;
+//         }
+//         if(nums[startPointer] === val && nums[endPointer] !== val){
+//             let temp = nums[endPointer];
+//             nums[endPointer] = "_";
+//             nums[startPointer] = temp;
+//             startPointer++;
+//             endPointer--;
+//             k++
+//         }
+//         else if(nums[startPointer] !== val && nums[endPointer] === val){
+//             nums[endPointer] = "_";
+//             k++;
+//             startPointer++;
+//             endPointer--;
+//         }
+//         else if(nums[startPointer] === val && nums[endPointer] === val){
+//             nums[endPointer] = "_";
+//             k++;
+//             endPointer--;
+//         }
+//         else{
+//             startPointer++;
+//         }
         
-    }
+//     }
     
-    k = nums.length - k;
-    return k;
+//     k = nums.length - k;
+//     return k;
     
-}
+// }
 
