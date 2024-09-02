@@ -1,7 +1,7 @@
-// Remove Duplicates from Sorted Array
+// DataStructure => Array, Algorithm => Two Pointers 
+// 1. Remove Duplicates from Sorted Array
 // 1- replace all duplicated elements with "_"
 // let nums = [0,0,1,1,1,2,2,3,3,4]; => [0,_,1,_,_,2,_,3,_,4]
-
 // let nums = [0,0,1,1,1,2,2,3,3,4];
 // let removeDuplicates = (nums)=>{
 //     let k = 0;
@@ -32,15 +32,16 @@
 // }
     
 // console.log(removeDuplicates(nums));
-
-// 27. Remove Element [3,2,2,3] 
+//.............................................................
+// 2. Remove Element [3,2,2,3] 
+// brainstorming:
 // for each to elements there are four status
-// first == val, end != val => swap, first++ , end--
-// first != val ,end == val => not swap , first++, end--
-// first == val ,end == val => not swap ,first same, end--
-// first != val ,end != val => not swap ,first ++ , same
-// will stop the loop when start>end
-
+// startPointer == val, endPointer != val => swap, startPointer++ , endPointer--
+// startPointer != val ,endPointer == val => not swap , startPointer++, endPointer--
+// startPointer == val ,endPointer == val => not swap ,startPointer same, endPointer--
+// startPointer != val ,endPointer != val => not swap ,startPointer ++ , same
+// will stop the loop when startPointer>endPointer
+// count removed elements and in the end assign k = nums length - count
 // let nums = [0,1,2,2,3,0,4,2]; 
 // let val = 2;
 // let removeElement = (nums,val)=>{
@@ -79,6 +80,23 @@
     
 //     k = nums.length - k;
 //     return k;
-    
 // }
+
+// ---------------------------------------------------------------
+// DataStructure => Array, Algorithm => Two Pointers, Sorting
+// 1. Minimum Average of Smallest and Largest Elements
+// brainstorming:
+// first sort the nums array
+// compute the average of first start and end elements of nums 
+// and add the average to the average array
+// remove min and max for each cycle
+// when nums array become empty return the smallest element of average array
+let nums = [7,8,3,4,15,13,4,1];
+
+let minimumAverage = (nums)=>{
+    let average = [];
+    
+}
+
+minimumAverage(nums)
 
