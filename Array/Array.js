@@ -91,12 +91,35 @@
 // and add the average to the average array
 // remove min and max for each cycle
 // when nums array become empty return the smallest element of average array
-let nums = [7,8,3,4,15,13,4,1];
+// let nums = [7,8,3,4,15,13,4,1];
 
-let minimumAverage = (nums)=>{
-    let average = [];
+// let minimumAverage = (nums)=>{
+//     let average = [];
+//     // sort nums
+//     for (let min = 0; min < nums.length; min++) {
+//         for (let d = min+1; d < nums.length; d++) {
+//             if(nums[min]>nums[d]){
+//                 let temp = nums[min];
+//                 nums[min] = nums[d];
+//                 nums[d] = temp;
+//             }
+//         }
+        
+//     }
+//     for (let j = 0; j < nums.length / 2; j++) {
+//         average[j] = (nums[j] + nums[nums.length - j - 1]) / 2;
+//     }
+//     // find minimum value of average
+//     let minimum = average[0];
+//     for (let d = 1; d < average.length; d++) {
+//         if(minimum>average[d]){
+//             minimum = average[d]
+//         }
+//     } 
+//     return minimum
     
-}
+// }
 
-minimumAverage(nums)
+// console.log(minimumAverage(nums));
+
 
