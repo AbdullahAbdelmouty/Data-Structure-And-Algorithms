@@ -1,0 +1,5 @@
+Linked List
+Hash Table
+5 problems => Medium
+5 problmes => Hard
+
