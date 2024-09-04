@@ -60,7 +60,42 @@ public class Array {
     //     }
     // }
     
+    // public int removeDuplicates(int[] nums) {
+    //     int k = 0;
+    //     int pointer = nums[0];
+    //     int count = 2;
+    //     for (int i = 1; i < nums.length; i++) {
+    //         if (pointer == nums[i]){
+    //             count--;
+    //             if(count <=0 ){
+    //                 nums[i] = 99;
+    //                 k++;
+    //             }
+    //         }else{
+    //             pointer = nums[i];
+    //             count=2;
+    //         }
+    //     }
+
+    //     for (int d = 1; d < nums.length; d++) {
+    //         if(nums[d]==99){
+    //             for (int j = d+1; j < nums.length; j++) {
+    //                 if(nums[j]!=99){
+    //                     nums[d] = nums[j];
+    //                     nums[j] = 99;
+    //                     break;
+    //                 }
+    //             }
+    //         }   
+    //     }
+    //     for(int test=0;test<nums.length;test++){
+    //         System.out.println(nums[test]);
+    //     }
+    //     return k=nums.length - k;
+    // }
     public static void main(String[] args) {
         Array array = new Array();
     }
+
+
 }
