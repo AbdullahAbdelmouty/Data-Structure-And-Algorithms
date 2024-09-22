@@ -95,7 +95,53 @@ public class Array {
     // }
     public static void main(String[] args) {
         Array array = new Array();
+        int [] nums = {-1,-100,3,99};
+        int k = 2;
+        array.rotate(nums, k);
     }
+    // [1,2,3,4,5,6,7] , k=3 
+    // rotate 1 steps to the right: [7,1,2,3,4,5,6]
+    // rotate 2 steps to the right: [6,7,1,2,3,4,5]
+    // rotate 3 steps to the right: [5,6,7,1,2,3,4]
+    // --------------------------------------------
+    // Input: nums = [-1,-100,3,99], k = 2 =>nums[i+k] = nums[i] 
+    // if i+k> length -1 => i+k = 0;
+    // Explanation: [-1,-100,3,99]
+    // [99,3,-100,-1]
+    // [3,99,-1,-100]
+    // rotate 1 steps to the right: [99,-1,-100,3]
+    // rotate 2 steps to the right: [3,99,-1,-100]
+    
+    public void rotate(int[] nums, int k) {
+        k = k%nums.length;
+        int n = nums.length;
+        // for(int i=0;i<k;i++){
+        //     int end = nums[nums.length-1];
+        //     for(int ele=nums.length-1;ele>0;ele--){
+        //         nums[ele] = nums[ele-1];
+        //     }
+        //     nums[0] = end;
+        // }
 
+        // for(int test=0;test<nums.length;test++){
+        //     System.out.println(nums[test]);
+        // }
+        // Reverse the entire array
+        reverse(nums, 0, n - 1);
 
+        // Reverse the first k elements
+        reverse(nums, 0, k - 1);
+
+        // Reverse the remaining n-k elements
+        reverse(nums, k, n - 1);
+    }
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
 }
