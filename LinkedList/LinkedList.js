@@ -132,6 +132,29 @@
 
 // newList.printAll();
  
+// hasCycle in linkedList?
+// references
+// Floyd’s Cycle Finding Algorithm => https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/
+// How does Floyd’s slow and fast pointers approach work? => https://www.geeksforgeeks.org/how-does-floyds-slow-and-fast-pointers-approach-work/ 
+// let hasCycle = function(head){    
+//     if(!head||!head.next){
+//         return false;
+//     }
+//     let fastPointer = head.next;
+//     let slowPointer = head;
+//     while(fastPointer !== slowPointer){
+//         if(!fastPointer || !fastPointer.next){
+//             return false;
+//         }
+//         console.log(fastPointer.val);
+//         console.log(slowPointer.val);
+//         slowPointer = slowPointer.next;
+//         fastPointer = fastPointer.next.next;
+//     }
+//     return true
+// }
+
+// console.log(hasCycle(head));
 class ListNode{
     constructor(val=null){
         this.val = val;
@@ -139,36 +162,55 @@ class ListNode{
     }
 }
 
-const head = new ListNode(0);
-const l1 = new ListNode(1);
+const head = new ListNode(2);
+const l1 = new ListNode(4);
 head.next = l1;
-const l2 = new ListNode(2);
-l1.next = l2
+const l2 = new ListNode(3);
+l1.next = l2;
 
-// references
-// Floyd’s Cycle Finding Algorithm => https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/
-// How does Floyd’s slow and fast pointers approach work? => https://www.geeksforgeeks.org/how-does-floyds-slow-and-fast-pointers-approach-work/ 
-let hasCycle = function(head){    
-    if(!head||!head.next){
-        return false;
+const head2 = new ListNode(5);
+const l11 = new ListNode(6);
+head2.next = l11;
+const l22 = new ListNode(4);
+l11.next = l22;
+
+// 342 + 465 = 807
+const addTwoNumber = function(l1,l2){
+    let pointer1 = l1;
+    let pointer2 = l2;
+    let carry = 0;
+    let list = new ListNode();
+    if(!pointer1.next && !pointer2.next){
+        list.val = pointer1.val + pointer2.val;
+        return list;
     }
-    let fastPointer = head.next;
-    let slowPointer = head;
-    while(fastPointer !== slowPointer){
-        if(!fastPointer || !fastPointer.next){
-            return false;
+    while(pointer1&&pointer2){
+        if((pointer1.val + pointer2.val)-10==0){
+            carry = carry + 1;     
+            list.val = 0;       
+        }else if((pointer1.val + pointer2.val)-10>0){
+            carry = carry + 1;
+            list.val = (pointer1.val + pointer2.val)-10;
+        }else{
+            list.val = pointer1.val + pointer2.val;
         }
-        console.log(fastPointer.val);
-        console.log(slowPointer.val);
-        slowPointer = slowPointer.next;
-        fastPointer = fastPointer.next.next;
+        console.log(carry,"carry");
+        // list.val = pointer1.val + pointer2.val;
+        if(!pointer1.next || !pointer2.next){
+            list.val =  pointer1.val + pointer2.val + carry;
+            // should handle if the sum over the 9
+        }
+    
+        console.log(list.val,"list.val");
+        pointer1 = pointer1.next;
+        pointer2 = pointer2.next;
+
+
     }
-    return true
+    return list;
 }
 
-console.log(hasCycle(head));
-
-
+console.log(addTwoNumber(head,head2));
 
 
 
