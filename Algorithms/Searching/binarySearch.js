@@ -37,8 +37,6 @@ const findMedianSortedArrays = function(nums1, nums2) {
         return arr[mid]
     }
 
-    
-    
 };
 
 let nums1 = [1,3];
