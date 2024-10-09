@@ -1,3 +1,3 @@
 # Trie Data Structure (Prefix Tree):
 The trie data structure, also known as a prefix tree, is a tree-like data structure used for efficient retrieval of key-value pairs. It is commonly used for implementing dictionaries and autocomplete features, making it a fundamental component in many search algorithms. In this article, we will explore all about Trie data structures in detail.
-More => [More](https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials/#what-is-trie-data-structure)
+[More](https://www.geeksforgeeks.org/introduction-to-trie-data-structure-and-algorithm-tutorials/#what-is-trie-data-structure)
