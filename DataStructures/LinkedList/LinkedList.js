@@ -209,6 +209,52 @@ class ListNode{
 // let l2 = new ListNode(5);                        
 
 // console.log(addTwoNumber(l1,l2));
+// let head = new ListNode(1, new ListNode(2));
 
+// let removeNthFromEnd = function(head, n) {
+//     // let pointer = head;
+//     // let size = 0;
+//     // if(head.next === null && n===1){
+//     //     return null;
+//     // }
+//     // // calculate size of linkedList
+//     // while(pointer){
+//     //     pointer = pointer.next;
+//     //     size++;
+//     // }
+//     // let count = size;
+//     // let pointer2 =head;
+//     // if(size === n){
+//     //     return head.next;
+//     // }
+//     // while(count>n){
+//     //     console.log(pointer2.val);
+//     //     if(count === n+1){
+//     //         console.log("done");
+//     //         console.log(pointer2.val);
+//     //         console.log(pointer2.next.next);
+//     //         pointer2.next = pointer2.next.next;
+//     //     }
+//     //     pointer2 = pointer2.next;
+//     //     count--;
+//     // }
+    
+//     // return head;
+//     let dummy = new ListNode(0);
+//     dummy.next = head;
+//     let first = dummy;
+//     let last = dummy;
+//     for (let i = 0; i <= n; i++) {
+//         first = first.next;
+//     }
+//     while(first){
+//         first = first.next;
+//         last = last.next;
+//     }
+//     second.next = second.next.next;
+//     return dummy.next
 
+// };
 
+// const res = removeNthFromEnd(head,2);
+// console.log(res,"res");
