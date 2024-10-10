@@ -155,64 +155,60 @@
 // }
 
 // console.log(hasCycle(head));
+
 class ListNode{
-    constructor(val=null){
+    constructor(val=null,next = null){
         this.val = val;
-        this.next = null;
+        this.next = next;
     }
 }
 
-const head = new ListNode(2);
-const l1 = new ListNode(4);
-head.next = l1;
-const l2 = new ListNode(3);
-l1.next = l2;
+// Input: l1 = [2,4,3], l2 = [5,6,4]
+// 342 + 465 = 807 => [7,0,8]
+// 9999999 + 9999 = 10009998 => [8,9,9,9,0,0,0,1]
+// list => [0,next=[7,null]]   
+// current.next = [7,null] <= current
+// const addTwoNumber = function(l1,l2){
+//     let dummyHead = new ListNode(0);    
+//     let current = dummyHead;
+//     let carry = 0;
+//     // console.log(list);
+//     while(l1||l2||carry>0){
+//         console.log("dsf");
+        
+//         let nodeSum = 0;
+//         let val1 = l1 !==null ?l1.val: 0;
+//         let val2 = l2 !==null ?l2.val: 0;
+//         // // calculate carry
+//         if( val1 + val2 + carry <= 9){
+//             nodeSum = val1 + val2  + carry;
+//             console.log("Sdf",nodeSum);
+            
+//             carry = 0;
+            
+//         }else if( val1 + val2  + carry === 10){
+//             carry = 1;
+//             nodeSum = 0;
+//         }else if( val1 + val2 + carry >= 10){
+//             nodeSum =  val1 + val2 + carry - 10;
+//             carry = 1;
+//         }
+//         current.next = new ListNode(nodeSum);     
+//         current = current.next;
+        
+//         if (l1 !== null) l1 = l1.next;
+//         if (l2 !== null) l2 = l2.next;
+//     }
 
-const head2 = new ListNode(5);
-const l11 = new ListNode(6);
-head2.next = l11;
-const l22 = new ListNode(4);
-l11.next = l22;
-
-// 342 + 465 = 807
-const addTwoNumber = function(l1,l2){
-    let pointer1 = l1;
-    let pointer2 = l2;
-    let carry = 0;
-    let list = new ListNode();
-    if(!pointer1.next && !pointer2.next){
-        list.val = pointer1.val + pointer2.val;
-        return list;
-    }
-    while(pointer1&&pointer2){
-        if((pointer1.val + pointer2.val)-10==0){
-            carry = carry + 1;     
-            list.val = 0;       
-        }else if((pointer1.val + pointer2.val)-10>0){
-            carry = carry + 1;
-            list.val = (pointer1.val + pointer2.val)-10;
-        }else{
-            list.val = pointer1.val + pointer2.val;
-        }
-        console.log(carry,"carry");
-        // list.val = pointer1.val + pointer2.val;
-        if(!pointer1.next || !pointer2.next){
-            list.val =  pointer1.val + pointer2.val + carry;
-            // should handle if the sum over the 9
-        }
+//     return dummyHead.next
     
-        console.log(list.val,"list.val");
-        pointer1 = pointer1.next;
-        pointer2 = pointer2.next;
+// }
 
+// let l1 = new ListNode(4)
 
-    }
-    return list;
-}
+// let l2 = new ListNode(5);                        
 
-console.log(addTwoNumber(head,head2));
-
-
+// console.log(addTwoNumber(l1,l2));
 
 
 

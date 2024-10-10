@@ -1,13 +1,13 @@
-Type   => 5 Easy - 4 Med - 1 Hard => Status
-String => 2 Easy - 2 Med - 0 Hard => inProgress
-Array => 6 Easy - 3 Med - 1 Hard => done
+Type        => # Easy - # Med - # Hard => Status
+String      => 3 Easy - 3 Med - 0 Hard => inProgress
+Array       => 6 Easy - 3 Med - 1 Hard => done
 Linked List => 1 Easy - 0 Med - 0 Hard => inProgress
-stack
-queue
-Hash Table => 3 Easy - 2 Med - 0 Hard => inProgress
+stack       => 1 Easy - 0 Med - 0 Hard => inProgress
+queue       => 0 Easy - 0 Med - 0 Hard => inProgress
+Hash Table  => 3 Easy - 2 Med - 0 Hard => inProgress
 -----------
-sorting *
-searching 
+sorting     => 0 Easy - 0 Med - 0 Hard => inProgress
+searching   => 0 Easy - 0 Med - 0 Hard => inProgress
 -----------
 two pointer => done
 sliding window => done
