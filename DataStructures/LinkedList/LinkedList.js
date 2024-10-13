@@ -105,31 +105,6 @@
 // list2.add(3);
 // list2.add(4);
 
-// const mergeTwoLists = (list1,list2)=>{
-//     let current1 = list1.head;
-//     let current2 = list2.head;
-//     console.log(newList);
-//     let diff = list2.getLength() - list1.getLength()<0? -(list2.getLength() - list1.getLength()):list2.getLength() - list1.getLength();
-//     let count = list1.getLength() > list2.getLength()? list1.getLength() - diff : list2.getLength() - diff;
-//     console.log(count,"count");
-    
-//     while(current1 !== null && current2 !==null){
-//         if(current1.data>=current2.data){
-//             newList.add(current2.data)
-//             newList.add(current1.data)            
-//         }else{
-//             newList.add(current1.data)
-//             newList.add(current2.data)            
-//         }
-//         current1 = current1.next;
-//         current2 = current2.next;
-//     }
-
-
-// }
-
-// mergeTwoLists(list1,list2)
-
 // newList.printAll();
  
 // hasCycle in linkedList?
@@ -258,3 +233,38 @@ class ListNode{
 
 // const res = removeNthFromEnd(head,2);
 // console.log(res,"res");
+
+// mergeTwoLists
+// const mergeTwoLists = (list1,list2)=>{
+//     let dummyHead = new ListNode(0);
+//     let current = dummyHead;
+
+//     // Continue while both lists have nodes
+//     while (list1 && list2) {
+//         if (list1.val < list2.val) {
+//             current.next = list1; 
+//             list1 = list1.next; 
+//         } else {
+//             current.next = list2; 
+//             list2 = list2.next;
+//         }
+//         current = current.next;
+//     }
+
+//     if (list1 !== null) {
+//         current.next = list1;  // Attach remaining nodes from list1
+//     } else {
+//         current.next = list2;  // Attach remaining nodes from list2
+//     }
+
+//     return dummyHead.next;
+// }
+
+// let l1 = new ListNode(5);
+
+// let l2 = new ListNode(1, 
+//             new ListNode(2, 
+//                 new ListNode(4)));        
+
+// let res = mergeTwoLists(l1,l2);
+
