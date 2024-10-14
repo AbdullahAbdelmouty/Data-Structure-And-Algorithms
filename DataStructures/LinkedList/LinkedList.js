@@ -268,3 +268,42 @@ class ListNode{
 
 // let res = mergeTwoLists(l1,l2);
 
+// 24 Swap Nodes in Pairs [1,2,3]
+// index = 1 => temp = 2; index[1] = 2,index[2] = 1; index +=2;
+// let swapPairs = function(head) {
+//     let dummyHead = new ListNode(0);
+//     dummyHead.next = head;
+//     let current = dummyHead;
+//     if(!head){
+//         return null;
+//     }
+//     if(!head.next){
+//         return head;
+//     }
+//     while(current.next !== null && current.next.next !== null){
+//         let first = current.next;
+//         let second = current.next.next;
+//         first.next = second.next;
+//         second.next = first;
+//         current.next = second;
+//         current = current.next.next
+//     }
+//     return dummyHead.next;
+// };
+
+// let head = new ListNode(1, 
+//             new ListNode(2, 
+//                 new ListNode(3,
+//                     new ListNode(4,
+//                         new ListNode(5)
+//                     )
+//                 )));   
+
+// let res = swapPairs(head);
+// console.log(res,"Res");
+
+// while(res){
+//     console.log(res.val);
+//     res = res.next;
+    
+// }

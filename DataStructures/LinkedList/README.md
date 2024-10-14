@@ -14,3 +14,5 @@ Reverse Traversal: While singly linked lists (with references to the next node o
 Singly Linked lists: Each node contain only one pointer to the next node.
 Doubly Linked Lists: Each node cotain two pointer on to the next node and other to the previous node.
 Circular Linked List: Circular Linked Lists are a variation of a linked list in which the last node point to first node or any other node before it.
+# What is dummy head (or sentinel node)? 
+is a commonly used technique in linked lists to simplify edge cases, such as inserting or deleting nodes at the beginning of the list. The dummy head is an extra node that doesn't hold any meaningful value but serves as a placeholder before the actual head of the list. It helps to avoid handling special cases where the head node itself changes during operations (like insertions or deletions).
