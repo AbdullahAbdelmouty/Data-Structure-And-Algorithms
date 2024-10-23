@@ -307,3 +307,93 @@ class ListNode{
 //     res = res.next;
     
 // }
+
+// Reverse LinkedList
+// let reverseLinkedList = function(head) {
+//     let prev = null;
+//     let current = head;
+  
+//     while (current !== null) {
+//       let nextNode = current.next; // Store the next node
+//       current.next = prev;         // Reverse the current node's pointer
+//       prev = current;              // Move prev to the current node
+//       current = nextNode;          // Move to the next node
+//     }
+  
+//     return prev; // New head of the reversed list
+    
+// }
+
+// reverseKGroup(head,2)       
+// let res = reverseLinkedList(head);
+// // console.log(res.next.next.next);
+// let current = res;
+// while (current) {
+//     console.log(current);
+    
+//     current =current.next;
+// }
+
+// let head = new ListNode(0, 
+//     new ListNode(1)
+// );
+// // 61. Rotate List
+// let rotateRight = function(head, k) {
+//     if(head==null){
+//         return null
+//     }
+//     if(head.next == null){
+//         return head;
+//     }
+//     if(k==0){
+//         return head;
+//     }
+//     let length = 0;
+//     let dummyHead = head;
+//     while(dummyHead){
+//         length++;
+//         dummyHead = dummyHead.next;
+      
+//     }
+//     console.log(length,"length");
+//     // while (k>length) {
+//     //     k = k - length;
+//     // }
+//     k = k%length;
+//     let newHead;
+//     let first = head;
+//     let second = head;
+//     for (let index = 0; index < k; index++) {
+//         second = second.next;
+//     }
+//     while(second !==null){
+//         first = first.next;
+//         second = second.next;
+//     }
+//     newHead = first;
+//     let current = newHead;
+//     while (current !== null) {
+//         console.log(current);
+        
+//         if (current.next ==null) {
+//             current.next = head;
+            
+//         }
+//         if (current.next === newHead) {
+//             current.next = null
+//         }
+//         current = current.next
+
+//     }
+//     return newHead;
+// };
+
+// let res = rotateRight(head,5);
+
+let head = new ListNode(1, 
+    new ListNode(2, 
+        new ListNode(3,
+            new ListNode(4,
+                new ListNode(5)
+            )
+        )));   
