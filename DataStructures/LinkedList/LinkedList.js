@@ -390,11 +390,6 @@ class ListNode{
 
 // let res = rotateRight(head,5);
 // 1 > 2 > 1 > 4 > 5
-let head = new ListNode(1, 
-    new ListNode(2, 
-        new ListNode(2)
-    )
-);
 
 // let deleteDuplicates = function(head) {
 //     if(head===null || head.next === null){
@@ -412,16 +407,11 @@ let head = new ListNode(1,
 //         // console.log(current,"current");
 //         // console.log(next,"next");
 //         // console.log("-----------------");
-        
 //         if ((current.val !== prevCurrent.val && current.val !== next.val)||(current.val !== prevCurrent.val && current.next === null)) {
-
 //             // console.log("currentForRes");
 //             currentForRes.next = new ListNode(current.val);
 //             currentForRes = currentForRes.next
-            
 //         }
-
-
 //         prevCurrent = prevCurrent.next;
 //         current = current.next;
 //         if(next.next)next = next.next;
@@ -430,3 +420,49 @@ let head = new ListNode(1,
 // };
 
 // let res = deleteDuplicates(head);
+
+
+
+// 83. Remove Duplicates from Sorted List
+// 1>1>1>2>3
+// let deleteDuplicates = function(head) {
+//     if(head == null || head.next == null){
+//         return head;
+//     }
+//     let current = head;
+
+//     while (current !== null) {
+//         // console.log(current,"current");
+//         let next = current.next;
+//         // console.log(next,"next");
+        
+//         if(next === null) break;
+//         if (current.val == next.val) {
+//             // console.log(current.val,"vs",next.val);
+            
+//             current.next = next.next;
+//         }else{
+//             current = current.next;
+//         }
+        
+
+//     }
+
+//     return head
+// };
+
+// let res = deleteDuplicates(head);
+
+let head = new ListNode(1, 
+    new ListNode(2, 
+        new ListNode(3, 
+            new ListNode(3, 
+                new ListNode(4, 
+                    new ListNode(4, 
+                        new ListNode(5)
+                    )
+                )
+            )
+        )
+    )
+);
