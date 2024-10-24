@@ -389,11 +389,44 @@ class ListNode{
 // };
 
 // let res = rotateRight(head,5);
-
+// 1 > 2 > 1 > 4 > 5
 let head = new ListNode(1, 
     new ListNode(2, 
-        new ListNode(3,
-            new ListNode(4,
-                new ListNode(5)
-            )
-        )));   
+        new ListNode(2)
+    )
+);
+
+// let deleteDuplicates = function(head) {
+//     if(head===null || head.next === null){
+//         return head
+//     }
+//     let newHead = new ListNode(300);
+//     let currentForRes = newHead;
+//     let dummyHead = new ListNode(200);
+//     dummyHead.next = head;
+//     let prevCurrent = dummyHead;
+//     let current = dummyHead.next;
+//     let next = current.next;
+//     while (current !== null) {
+//         // console.log(prevCurrent,"prev");
+//         // console.log(current,"current");
+//         // console.log(next,"next");
+//         // console.log("-----------------");
+        
+//         if ((current.val !== prevCurrent.val && current.val !== next.val)||(current.val !== prevCurrent.val && current.next === null)) {
+
+//             // console.log("currentForRes");
+//             currentForRes.next = new ListNode(current.val);
+//             currentForRes = currentForRes.next
+            
+//         }
+
+
+//         prevCurrent = prevCurrent.next;
+//         current = current.next;
+//         if(next.next)next = next.next;
+//     }
+//     return newHead.next
+// };
+
+// let res = deleteDuplicates(head);
