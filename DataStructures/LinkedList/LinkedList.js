@@ -453,16 +453,74 @@ class ListNode{
 
 // let res = deleteDuplicates(head);
 
+
+
+// 25. Reverse Nodes in k-Group
+let reverseKGroup = function(head, k) {
+    if (head ==null || head.next == null) {
+        return head;
+    }
+    // calculate length
+    let dummyHead = head;
+    let current = head;
+    let length = 0;
+    while(dummyHead !== null){
+        length++;
+        dummyHead = dummyHead.next;
+    }
+    // console.log(length,"length");
+    let prev = null;
+    for (let index = 0; index < k; index++) {
+        let nextNode = current.next;
+        current.next = prev;
+        prev = current;
+        current = nextNode;
+     }
+
+    return reverseKGroup(current,k);
+};
 let head = new ListNode(1, 
     new ListNode(2, 
         new ListNode(3, 
-            new ListNode(3, 
-                new ListNode(4, 
-                    new ListNode(4, 
-                        new ListNode(5)
-                    )
-                )
+            new ListNode(4, 
+                new ListNode(5)
             )
         )
     )
 );
+// let res = reverseKGroup(head,2);
+// let reverseBetween = function(head, left, right) {
+//     if (head == null || left === right) return head;
+
+//     // Initialize a dummy node
+//     let dummy = new ListNode(0);
+//     dummy.next = head;
+//     let newLeft = dummy;
+
+//     for (let i = 1; i < left; i++) {
+//         newLeft = newLeft.next;
+//     }
+//     console.log(newLeft,"newLeft");
+    
+//     let start = newLeft.next;
+//     let prev = null;
+//     let current = start;
+
+//     for (let i = left; i <= right; i++) {
+//         let nextNode = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = nextNode;
+//     } 
+//     newLeft.next = prev;
+//     start.next = current;
+
+//     return dummy.next;
+    
+// };
+// let res = reverseBetween(head,2,4)
+// while (res !== null) {
+//     console.log(res);
+    
+//     res = res.next;
+// }
