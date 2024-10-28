@@ -1,7 +1,7 @@
 Type        => # Easy - # Med - # Hard => Status
 String      => 3 Easy - 3 Med - 0 Hard => inProgress
 Array       => 6 Easy - 3 Med - 1 Hard => done
-Linked List => 1 Easy - 0 Med - 0 Hard => inProgress
+Linked List => 3 Easy - 6 Med - 0 Hard => inProgress
 stack       => 1 Easy - 0 Med - 0 Hard => inProgress
 queue       => 0 Easy - 0 Med - 0 Hard => inProgress
 Hash Table  => 3 Easy - 2 Med - 0 Hard => inProgress
