@@ -129,3 +129,49 @@
 //         return this.minStack[this.minStack.length - 1]
 //     }
 // };
+
+// let calculate = function(s) {
+//     let stack = [];
+//     let currentNumber = 0;
+//     let lastOperator = '+';
+//     s = s.replace(/\s+/g, ''); // Remove all spaces
+//     console.log(s,"s after remove space");
+    
+//     for (let i = 0; i < s.length; i++) {
+//         let char = s[i];
+        
+//         // If the character is a digit, build the current number
+//         if (!isNaN(char)) {
+//             currentNumber = currentNumber * 10 + parseInt(char);
+//         }
+        
+//         // If the character is an operator or the last character in the string
+//         if (isNaN(char) || i === s.length - 1) {
+//             if (lastOperator === '+') {
+//                 stack.push(currentNumber);
+//             } else if (lastOperator === '-') {
+//                 stack.push(-currentNumber);
+//             } else if (lastOperator === '*') {
+//                 stack.push(stack.pop() * currentNumber);
+//             } else if (lastOperator === '/') {
+//                 // Use Math.trunc to simulate integer division truncating towards zero
+//                 stack.push(Math.trunc(stack.pop() / currentNumber));
+//             }
+
+//             // Reset current number and update last operator
+//             currentNumber = 0;
+//             lastOperator = char;
+//         }
+//     }
+
+//     // Sum up all values in the stack to get the final result
+//     return stack.reduce((sum, num) => sum + num, 0);
+
+// };
+
+// let s = "5-3/2";
+
+// const res = calculate(s);
+// console.log(res,"Res");
+// console.log(isNaN('0.0314E+2'));
+

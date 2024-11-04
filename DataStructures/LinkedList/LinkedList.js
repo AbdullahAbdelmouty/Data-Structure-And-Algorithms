@@ -496,31 +496,37 @@ let head = new ListNode(1,
     )
 );
 // 25. Reverse Nodes in k-Group
-let reverseKGroup = function(head, k) {
-    if (head ==null || head.next == null) {
-        return head;
-    }
-    // calculate length
-    let dummyHead = head;
-    let current = head;
-    let length = 0;
-    while(dummyHead !== null){
-        length++;
-        dummyHead = dummyHead.next;
-    }
-    // console.log(length,"length");
-    let prev = null;
-    for (let index = 0; index < k; index++) {
-        let nextNode = current.next;
-        current.next = prev;
-        prev = current;
-        current = nextNode;
-     }
+// let reverseKGroup = function(head, k) {
+//     if (head ==null || head.next == null) {
+//         return head;
+//     }
+//     // calculate length
+//     let dummyHead = head;
+//     let current = head;
+//     let length = 0;
+//     while(dummyHead !== null){
+//         length++;
+//         dummyHead = dummyHead.next;
+//     }
+//     // console.log(length,"length");
+//     let prev = null;
+//     for (let index = 0; index < k; index++) {
+//         let nextNode = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = nextNode;
+//      }
 
-    return reverseKGroup(current,k);
+//     return reverseKGroup(current,k);
+// };
+
+// 143. Reorder List
+let reorderList = function(head) {
+    console.log(head);
+    
 };
 
-
+reorderList(head)
 // while (res !== null) {
 //     console.log(res);
     
